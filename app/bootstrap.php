@@ -87,7 +87,7 @@ function can_manage_post(array $post): bool { return is_admin() || (int)$post['a
 
 function render_public_page(string $file, array $replacements = []): never
 {
-    $html = file_get_contents(__DIR__ . '/../' . $file);
+    $html = file_get_contents(__DIR__ . '/views/' . $file);
     if ($html === false) { http_response_code(500); exit('Página indisponível.'); }
     $html = str_replace(
         ['href="index.html"', 'href="reciclagem.html"', 'href="sobre.html"', 'href="contato.html"'],

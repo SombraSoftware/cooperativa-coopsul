@@ -10,10 +10,10 @@ if ($basePath !== '' && str_starts_with($requestPath, $basePath)) {
 $route = trim($requestPath, '/');
 
 $routes = [
-    '' => static fn() => render_public_page('index.html'),
-    'reciclagem' => static fn() => render_public_page('reciclagem.html'),
-    'sobre' => static fn() => render_public_page('sobre.html'),
-    'social' => static fn() => render_public_page('social.html'),
+    '' => static fn() => render_public_page('index.php'),
+    'reciclagem' => static fn() => render_public_page('reciclagem.php'),
+    'sobre' => static fn() => render_public_page('sobre.php'),
+    'social' => static fn() => render_public_page('social.php'),
     'contato' => static function (): never { require __DIR__ . '/contato.php'; exit; },
 ];
 

@@ -28,7 +28,7 @@ scripts/criar-admin.php    criação do primeiro administrador
 docs/                      documentação
 ```
 
-As páginas públicas usam `index.php` como front controller, com as rotas `/`, `/reciclagem`, `/sobre`, `/contato` e `/social`. Os antigos arquivos HTML são fontes de apresentação lidas pelo renderizador PHP. O `.htaccess` envia rotas desconhecidas ao front controller e redireciona acessos antigos em `.html` ou `.php` para a URL canônica sem extensão.
+As páginas públicas usam `index.php` como front controller, com as rotas `/`, `/reciclagem`, `/sobre`, `/contato` e `/social`. A apresentação fica em templates PHP dentro de `app/views/`. O `.htaccess` envia rotas desconhecidas ao front controller e redireciona acessos antigos em `.html` ou `.php` para a URL canônica sem extensão.
 
 O formulário de contato é processado em `contato.php`, protegido por CSRF e campo antispam. As mensagens ficam em `contact_messages` e somente o Administrador pode consultá-las em `/administracao-coopsul/mensagens.php`.
 

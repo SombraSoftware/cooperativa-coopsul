@@ -30,6 +30,6 @@ if (isset($_SESSION['contact_success'])) {
 $formOpen = '<form id="contactForm" method="post" action="' . e(app_url('contato')) . '">' .
     '<input type="hidden" name="csrf" value="' . e(csrf_token()) . '">' .
     '<label class="form-honeypot" aria-hidden="true">Site<input name="website" tabindex="-1" autocomplete="off"></label>';
-render_public_page('contato.html', [
+render_public_page('contato.php', [
     '<form id="contactForm">' => $feedback . $formOpen,
 ]);

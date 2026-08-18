@@ -4,7 +4,7 @@
 ## 📌 Visão Geral
 
 Este repositório contém o site oficial da **Cooperativa Coopsul** - Cooperativa de Materiais Recicláveis de Cruzeiro do Sul, Acre.  
-O site foi desenvolvido com tecnologias web básicas (**HTML**, **CSS** e **JavaScript**) para apresentar a cooperativa, seus serviços e facilitar o contato com a comunidade.
+O site utiliza backend **PHP**, templates de apresentação, CSS e JavaScript para apresentar a cooperativa, publicar notícias e receber contatos.
 
 ---
 
@@ -21,10 +21,10 @@ Atualmente, conta com **22 cooperados** e tem como missão:
 
 O site é composto por 4 páginas principais:
 
-- `index.html` — Página inicial com visão geral da cooperativa  
-- `reciclagem.html` — Informações sobre o processo de reciclagem e materiais aceitos  
-- `sobre.html` — História, missão e valores da cooperativa  
-- `contato.html` — Formulário de contato e informações de localização  
+- `/` — Página inicial com visão geral da cooperativa
+- `/reciclagem` — Informações sobre o processo de reciclagem e materiais aceitos
+- `/sobre` — História, missão e valores da cooperativa
+- `/contato` — Formulário de contato e informações de localização
 
 ---
 
@@ -43,10 +43,10 @@ O site é composto por 4 páginas principais:
 
 ```text
 coopsul-site/
-/index.html        # Página inicial
-/reciclagem.html   # Página sobre reciclagem
-/sobre.html        # Página sobre a cooperativa
-/contato.html      # Página de contato
+/index.php         # Front controller e roteador
+/app/views/        # Templates PHP das páginas públicas
+/contato.php       # Processamento do formulário
+/api/              # Endpoints públicos
 /README.md         # Este arquivo
 
 /assets/css/       # Estilos principais
@@ -79,7 +79,7 @@ coopsul-site/
 
 Você pode personalizar o site conforme suas necessidades:
 
-- **Conteúdo**: Edite os arquivos `.html` conforme necessário  
+- **Conteúdo**: Edite os templates PHP em `app/views/`
 - **Estilos**: Modifique o `style.css` para alterar cores, fontes e layout  
 - **Imagens**: Substitua os links de imagens por arquivos locais  
 - **Formulário**: Configure o backend para processar os dados do formulário de contato  

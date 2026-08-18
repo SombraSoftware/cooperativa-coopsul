@@ -4,7 +4,7 @@
 
 A página `index.php` é processada pelo backend e consulta `api/noticias.php` ao carregar. A API retorna somente notícias publicadas, da mais recente para a mais antiga. O JavaScript cria os cartões usando `textContent`, evitando a execução de HTML inserido por usuários.
 
-Todas as páginas públicas possuem controladores PHP. Endereços antigos terminados em `.html` são redirecionados para suas versões `.php`. O contato é persistido no banco e aparece na caixa de mensagens do Administrador.
+Todas as páginas públicas usam o front controller PHP e URLs sem extensão. Endereços legados são redirecionados para a rota canônica. O contato é persistido no banco e aparece na caixa de mensagens do Administrador.
 
 O endereço administrativo não aparece no site público. O acesso é feito diretamente por `/administracao-coopsul/`. A segurança é garantida por autenticação, sessão, hash de senha, CSRF e validação das permissões no servidor.
 
