@@ -54,6 +54,31 @@ a:hover {
     color: white;
 }
 
+/* Ícones SVG locais (Font Awesome Free 7.3.1) */
+.fa-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+    vertical-align: -0.125em;
+}
+
+.card-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.heading-icon {
+    width: 1.1em;
+    height: 1.1em;
+    margin-right: 0.35rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
 /* Header */
 header {
     background-color: #048d3e;
@@ -219,10 +244,12 @@ footer {
     margin-top: 0.5rem;
 }
 
+.social-link .social-icon,
 .social-link img {
     transition: transform 0.3s;
 }
 
+.social-link:hover .social-icon,
 .social-link:hover img {
     transform: scale(1.1);
 }
