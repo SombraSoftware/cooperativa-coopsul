@@ -223,8 +223,25 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .page-header {
+        padding: 2rem 0;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .mission,
+    .history,
+    .values,
+    .operation,
+    .team-cta {
+        padding: 3rem 0;
+    }
+
     .mission-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .history-timeline:before {
@@ -249,6 +266,10 @@
     
     .operation-content {
         grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
     
     .operation-stats {

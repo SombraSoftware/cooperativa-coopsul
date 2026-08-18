@@ -169,4 +169,18 @@
     .page-header h1 {
         font-size: 2rem;
     }
+
+    .recycling-process,
+    .accepted-materials,
+    .recycling-tips,
+    .delivery-info {
+        padding: 3rem 0;
+    }
+
+    .process-steps,
+    .materials-list,
+    .tips-grid,
+    .delivery-options {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }

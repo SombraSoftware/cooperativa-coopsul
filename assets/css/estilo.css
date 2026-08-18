@@ -142,6 +142,10 @@ nav ul li a:hover:after {
     width: 100%;
 }
 
+.nav-icon {
+    display: none;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/galpao-001.jpeg');
@@ -292,6 +296,117 @@ footer {
 }
 
 /* Responsividade */
+@media (max-width: 767px) {
+    body {
+        padding-bottom: calc(92px + env(safe-area-inset-bottom));
+    }
+
+    header {
+        position: relative;
+        padding: 0.75rem 0;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        display: block;
+        width: 72px;
+        height: auto;
+    }
+
+    nav ul {
+        position: fixed;
+        z-index: 1000;
+        left: 50%;
+        bottom: calc(12px + env(safe-area-inset-bottom));
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns: repeat(4, 52px);
+        gap: 8px;
+        width: max-content;
+        max-width: calc(100vw - 24px);
+        margin: 0;
+        padding: 8px 12px;
+        background-color: #048d3e;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 999px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a,
+    nav ul li a.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        padding: 0;
+        color: white;
+        background-color: #17211b;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    }
+
+    nav ul li a.active {
+        background-color: white;
+        border-color: #17211b;
+        box-shadow: 0 0 0 3px #048d3e;
+    }
+
+    nav ul li a:after {
+        display: none;
+    }
+
+    .nav-icon {
+        display: block;
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+        filter: invert(1);
+    }
+
+    nav ul li a.active .nav-icon {
+        filter: none;
+    }
+
+    .nav-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .hero {
+        padding: 3.5rem 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .benefits,
+    .materials {
+        padding: 3rem 0;
+    }
+
+    .benefits-grid,
+    .materials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (min-width: 768px) {
     header .container {
         display: flex;
@@ -303,9 +418,18 @@ footer {
         margin-top: 0;
     }
 
-    .footer .container {
+    footer > .container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }
