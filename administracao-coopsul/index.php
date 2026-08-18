@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 }
 if (!user()): ?>
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Administração Coopsul</title><link rel="stylesheet" href="../assets/css/admin.css"></head>
-<body class="admin-login"><main class="login-card"><img src="/assets/img/logo_coopsul.png" alt="Coopsul"><h1>Área editorial</h1><?php if ($error): ?><p class="alert error"><?= e($error) ?></p><?php endif; ?><form method="post"><input type="hidden" name="csrf" value="<?= csrf_token() ?>"><label>Usuário<input name="username" autocomplete="username" required autofocus></label><label>Senha<input type="password" name="password" autocomplete="current-password" required></label><button name="login" value="1">Entrar</button></form></main></body></html>
+<body class="admin-login"><main class="login-card"><img src="<?= e(app_url('assets/img/logo_coopsul.png')) ?>" alt="Coopsul"><h1>Área editorial</h1><?php if ($error): ?><p class="alert error"><?= e($error) ?></p><?php endif; ?><form method="post"><input type="hidden" name="csrf" value="<?= csrf_token() ?>"><label>Usuário<input name="username" autocomplete="username" required autofocus></label><label>Senha<input type="password" name="password" autocomplete="current-password" required></label><button name="login" value="1">Entrar</button></form></main></body></html>
 <?php exit; endif;
 $edit = null;
 if (isset($_GET['editar'])) {
