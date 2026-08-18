@@ -2,10 +2,11 @@
 
 ## Preparação
 
-1. Use PHP 8.1+ com `pdo_sqlite`, `fileinfo` e HTTPS.
+1. Use PHP 8.0+ com `pdo_sqlite`, `fileinfo` e HTTPS.
 2. Garanta escrita para o servidor web somente em `data/` e `uploads/noticias/`.
 3. Crie o administrador pelo terminal com `scripts/criar-admin.php`; bloqueie `scripts/` na web.
 4. Entre em `/administracao-coopsul/`, crie contas individuais e use senhas fortes.
+5. Confirme que `mod_rewrite` está habilitado e que `DirectoryIndex index.php` é aceito.
 
 No Apache, mantenha `AllowOverride All` para que os `.htaccess` protejam banco e uploads. Como defesa adicional, mova `data/` para fora da raiz pública e atualize `COOPSUL_DB_PATH` em `app/config.php`.
 
@@ -37,4 +38,4 @@ Antes de atualizar, preserve ambos. Nunca os substitua por diretórios vazios do
 - execução de PHP bloqueada em `uploads/noticias/`
 - restauração de backup testada periodicamente
 - contas antigas desativadas
-
+- `php tests/security/verify.php` executado sem falhas

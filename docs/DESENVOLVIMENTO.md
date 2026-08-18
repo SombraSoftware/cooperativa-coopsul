@@ -2,7 +2,7 @@
 
 ## Requisitos
 
-- PHP 8.1 ou mais recente
+- PHP 8.0 ou mais recente
 - Extensões PHP `pdo_sqlite` e `fileinfo`
 - Apache com suporte a `.htaccess`
 
@@ -28,5 +28,10 @@ scripts/criar-admin.php    criação do primeiro administrador
 docs/                      documentação
 ```
 
+As páginas públicas usam `index.php` como front controller, com as rotas `/`, `/reciclagem`, `/sobre`, `/contato` e `/social`. Os antigos arquivos HTML são fontes de apresentação lidas pelo renderizador PHP. O `.htaccess` envia rotas desconhecidas ao front controller e redireciona acessos antigos em `.html` ou `.php` para a URL canônica sem extensão.
+
+O formulário de contato é processado em `contato.php`, protegido por CSRF e campo antispam. As mensagens ficam em `contact_messages` e somente o Administrador pode consultá-las em `/administracao-coopsul/mensagens.php`.
+
 Toda escrita exige sessão e token CSRF. A autorização de editar/excluir é repetida no servidor e as consultas recebem parâmetros preparados.
 
+As verificações defensivas e o calendário de revisão ficam em `tests/security/`. Execute `php tests/security/verify.php` após mudanças no backend e antes de publicar.

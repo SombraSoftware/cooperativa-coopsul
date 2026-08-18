@@ -1,5 +1,5 @@
 /data/*.sqlite
 /data/*.sqlite-*
+/data/sess_*
 /uploads/noticias/*
 !/uploads/noticias/.htaccess
-

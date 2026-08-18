@@ -30,6 +30,7 @@ O site é composto por 4 páginas principais:
 
 ## 🛠️ Tecnologias Utilizadas
 
+- **PHP 8.0+** – Backend, autenticação, conteúdo e formulário de contato
 - **HTML5** – Estrutura do conteúdo  
 - **CSS3** – Estilização e layout responsivo  
 - **JavaScript** – Interatividade básica  
@@ -68,8 +69,9 @@ coopsul-site/
 ## 🚀 Como Utilizar
 
 1. Clone este repositório ou faça o download dos arquivos
-2. Abra o arquivo `index.html` em qualquer navegador moderno
-3. Navegue entre as páginas através do menu superior
+2. Sirva a pasta com Apache e PHP 8.0+
+3. Abra `index.php` pelo endereço HTTP do servidor
+4. Consulte `docs/` para configurar usuários e produção
 
 ---
 

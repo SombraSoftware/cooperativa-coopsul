@@ -32,6 +32,11 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
+.form-honeypot { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }
+.form-feedback { padding: 12px 14px; border-radius: 5px; margin-bottom: 18px; }
+.form-success { color: #155f31; background: #e0f5e8; border: 1px solid #9bd3ae; }
+.form-error { color: #8a1f1f; background: #fde7e7; border: 1px solid #e4aaaa; }
+
 .contact-form h2 {
     margin-bottom: 1.5rem;
     color: #27ae60;

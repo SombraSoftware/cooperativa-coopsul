@@ -1,0 +1,18 @@
+DirectoryIndex index.php
+Options -Indexes
+RewriteEngine On
+
+# URLs antigas apontam para a rota canônica sem extensão.
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.(html|php)[\s?] [NC]
+RewriteRule ^index\.(html|php)$ ./ [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s/+(.*/)?(reciclagem|sobre|contato|social)\.(html|php)[\s?] [NC]
+RewriteRule ^(reciclagem|sobre|contato|social)\.(html|php)$ $1 [R=301,L,NE]
+
+# Front controller: arquivos e diretórios reais continuam acessíveis.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+<FilesMatch "^(config|bootstrap)\.php$">
+    Require all denied
+</FilesMatch>

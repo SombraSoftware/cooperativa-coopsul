@@ -46,6 +46,17 @@ function db(): PDO
         published_at TEXT,
         FOREIGN KEY(author_id) REFERENCES users(id) ON DELETE RESTRICT
     )');
+    $pdo->exec('CREATE TABLE IF NOT EXISTS contact_messages (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        email TEXT NOT NULL,
+        phone TEXT NOT NULL DEFAULT \'\',
+        subject TEXT NOT NULL,
+        message TEXT NOT NULL,
+        status TEXT NOT NULL DEFAULT \'nova\' CHECK(status IN (\'nova\', \'lida\')),
+        ip_hash TEXT NOT NULL DEFAULT \'\',
+        created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+    )');
     return $pdo;
 }
 
@@ -53,7 +64,7 @@ function e(?string $value): string { return htmlspecialchars($value ?? '', ENT_Q
 function app_url(string $path = ''): string {
     $script = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '');
     $base = '';
-    foreach (['/administracao-coopsul/', '/api/', '/scripts/'] as $marker) {
+    foreach (['/administracao-coopsul/', '/api/', '/scripts/', '/index.php'] as $marker) {
         $position = strpos($script, $marker);
         if ($position !== false) { $base = substr($script, 0, $position); break; }
     }
@@ -73,6 +84,21 @@ function redirect_admin(string $message = ''): never {
     header('Location: ' . app_url('administracao-coopsul/')); exit;
 }
 function can_manage_post(array $post): bool { return is_admin() || (int)$post['author_id'] === (int)(user()['id'] ?? 0); }
+
+function render_public_page(string $file, array $replacements = []): never
+{
+    $html = file_get_contents(__DIR__ . '/../' . $file);
+    if ($html === false) { http_response_code(500); exit('Página indisponível.'); }
+    $html = str_replace(
+        ['href="index.html"', 'href="reciclagem.html"', 'href="sobre.html"', 'href="contato.html"'],
+        ['href="' . e(app_url()) . '"', 'href="' . e(app_url('reciclagem')) . '"', 'href="' . e(app_url('sobre')) . '"', 'href="' . e(app_url('contato')) . '"'],
+        $html
+    );
+    if ($replacements) $html = str_replace(array_keys($replacements), array_values($replacements), $html);
+    header('Content-Type: text/html; charset=UTF-8');
+    echo $html;
+    exit;
+}
 
 function save_image(array $file): ?string
 {
