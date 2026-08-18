@@ -74,6 +74,12 @@
     gap: 2rem;
 }
 
+.heading-icon-recycle {
+    width: 10em;
+    height: 10em;
+    margin-right: 0.35rem;
+}
+
 .material-category {
     background-color: white;
     padding: 1.5rem;
