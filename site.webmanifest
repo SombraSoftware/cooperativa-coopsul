@@ -1,0 +1,19 @@
+{
+    "name": "Cooperativa Coopsul",
+    "short_name": "Coopsul",
+    "description": "Cooperativa de materiais recicláveis de Cruzeiro do Sul.",
+    "lang": "pt-BR",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#198754",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "1080x1080",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}
