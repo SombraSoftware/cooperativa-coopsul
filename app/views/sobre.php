@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Somos uma cooperativa de materiais reciclados. Trabalhamos juntos para o benefício de todos os cooperados, com decisões coletivas e democráticas.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#198754">
     <link rel="canonical" href="https://www.cooperativa-coopsul.site/sobre">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- Open Graph Tags para preview em redes sociais -->
     <meta property="og:title" content="Cooperativa Coopsul">
     <meta property="og:description" content="Somos uma cooperativa de materiais reciclados. Trabalhamos juntos para o benefício de todos os cooperados, com decisões coletivas e democráticas.">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cooperativa Coopsul">
     <meta property="og:url" content="https://www.cooperativa-coopsul.site/sobre">
     <meta property="og:image" content="https://www.cooperativa-coopsul.site/assets/img/og/social_3.png">
     <meta property="og:image:width" content="1200">

@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /administracao-coopsul/
+Disallow: /api/
+Disallow: /scripts/
 
 Sitemap: https://www.cooperativa-coopsul.site/sitemap.xml
