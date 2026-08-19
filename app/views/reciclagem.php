@@ -3,6 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos uma cooperativa de materiais reciclados. Trabalhamos juntos para o benefício de todos os cooperados, com decisões coletivas e democráticas.">
+    <link rel="canonical" href="https://www.cooperativa-coopsul.site/reciclagem">
+    <!-- Open Graph Tags para preview em redes sociais -->
+    <meta property="og:title" content="Cooperativa Coopsul">
+    <meta property="og:description" content="Somos uma cooperativa de materiais reciclados. Trabalhamos juntos para o benefício de todos os cooperados, com decisões coletivas e democráticas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cooperativa-coopsul.site/reciclagem">
+    <meta property="og:image" content="https://www.cooperativa-coopsul.site/assets/img/og/social_3.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="640">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Cooperativa Coopsul">
+    <meta property="og:locale" content="pt_BR">
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cooperativa Coopsul">
+    <meta name="twitter:description" content="Somos uma cooperativa de materiais reciclados. Trabalhamos juntos para o benefício de todos os cooperados, com decisões coletivas e democráticas.">
+    <meta name="twitter:image" content="https://www.cooperativa-coopsul.site/assets/img/og/social_3.png">
+    <meta name="twitter:image:alt" content="Cooperativa Coopsul">
     <title>Reciclagem | Cooperativa Coopsul</title>
     <link rel="stylesheet" href="./assets/css/estilo.css">
     <link rel="stylesheet" href="./assets/css/estilo-reciclagem.css">
